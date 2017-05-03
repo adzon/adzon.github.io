@@ -333,6 +333,10 @@
 <p>我使用的是5.4版本的Laravel</p>
 <p>新建一个Laravel App.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laravel new site</div></pre></td></tr></table></figure></p>
 <p>安装laravel-admin<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require encore/laravel-admin <span class="string">"1.4.*"</span></div></pre></td></tr></table></figure></p>
+<p>在 config/app.php 里面添加一个 ServiceProvider:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Encore\Admin\Providers\AdminServiceProvider::class</div></pre></td></tr></table></figure></p>
+<p>执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan vendor:publish --tag=laravel-admin</div></pre></td></tr></table></figure></p>
+<p>初始化~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan admin:install</div></pre></td></tr></table></figure></p>
+<p>妥了~~ 默认账号密码是admin/admin</p>
 
           
         

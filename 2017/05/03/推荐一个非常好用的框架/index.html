@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot;">
+<meta name="description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot; 在 conf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="推荐一个非常好用的Laravel后台快速开发框架Laravel Admin">
 <meta property="og:url" content="http://www.huleping.com/2017/05/03/推荐一个非常好用的框架/index.html">
 <meta property="og:site_name" content="执行力就是挨个搞">
-<meta property="og:description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot;">
+<meta property="og:description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot; 在 conf">
 <meta property="og:image" content="http://assets.shangyufangchan.com/2017-05-03-081910.jpg">
-<meta property="og:updated_time" content="2017-05-03T08:29:58.000Z">
+<meta property="og:updated_time" content="2017-05-03T08:33:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="推荐一个非常好用的Laravel后台快速开发框架Laravel Admin">
-<meta name="twitter:description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot;">
+<meta name="twitter:description" content="Laravel-admin快速后台开发的时候，还是比较爽的。  目前拿这个框架写了几个后台，终于不会因为界面的问题浪费太多时间了～～～ 搭建起来也特别简单。 我使用的是5.4版本的Laravel 新建一个Laravel App.1laravel new site 安装laravel-admin1composer require encore/laravel-admin &quot;1.4.*&quot; 在 conf">
 <meta name="twitter:image" content="http://assets.shangyufangchan.com/2017-05-03-081910.jpg">
 
 
@@ -332,6 +332,10 @@
 <p>我使用的是5.4版本的Laravel</p>
 <p>新建一个Laravel App.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laravel new site</div></pre></td></tr></table></figure></p>
 <p>安装laravel-admin<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer require encore/laravel-admin <span class="string">"1.4.*"</span></div></pre></td></tr></table></figure></p>
+<p>在 config/app.php 里面添加一个 ServiceProvider:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Encore\Admin\Providers\AdminServiceProvider::class</div></pre></td></tr></table></figure></p>
+<p>执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan vendor:publish --tag=laravel-admin</div></pre></td></tr></table></figure></p>
+<p>初始化~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan admin:install</div></pre></td></tr></table></figure></p>
+<p>妥了~~ 默认账号密码是admin/admin</p>
 
       
     </div>
