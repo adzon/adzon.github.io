@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="一直对数据库查询语句，各种关联非常的不感冒. 直到最近开始使用laravel，简单了解了Eloquent之后，发现这玩意真的是好用到哭啊。 本来我还非常脑残的使用这种方式来查询 123$order = Orders::where(&apos;id&apos;,$order_id)-&amp;gt;first();$customer = Customers::where(&apos;id&apos;,$order[&apos;customer_id&apos;])-">
+<meta name="description" content="现在使用git来发布代码，所以每次更新的时候，总是需要登录服务器，cd到网站目录，然后git pull。 本来觉得挺爽的，后来次数多了，发现。。。真的挺蠢。 本来决定写一个sh来解决这个问题，后来发现，原来有更好的解决办法，就是Laravel Envoy! 安装~ 1composer global require &quot;laravel/envoy=~1.0&quot; 教程什么的就看官网的～ https://l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laravel的Eloquent好用到哭">
-<meta property="og:url" content="http://www.huleping.com/2017/05/05/Laravel的Eloquent好用到哭/index.html">
+<meta property="og:title" content="使用Laravel Envoy来快速部署代码">
+<meta property="og:url" content="http://www.huleping.com/2017/05/20/使用Laravel-Envoy来快速部署代码/index.html">
 <meta property="og:site_name" content="执行力就是挨个搞">
-<meta property="og:description" content="一直对数据库查询语句，各种关联非常的不感冒. 直到最近开始使用laravel，简单了解了Eloquent之后，发现这玩意真的是好用到哭啊。 本来我还非常脑残的使用这种方式来查询 123$order = Orders::where(&apos;id&apos;,$order_id)-&amp;gt;first();$customer = Customers::where(&apos;id&apos;,$order[&apos;customer_id&apos;])-">
-<meta property="og:updated_time" content="2017-05-05T03:02:46.000Z">
+<meta property="og:description" content="现在使用git来发布代码，所以每次更新的时候，总是需要登录服务器，cd到网站目录，然后git pull。 本来觉得挺爽的，后来次数多了，发现。。。真的挺蠢。 本来决定写一个sh来解决这个问题，后来发现，原来有更好的解决办法，就是Laravel Envoy! 安装~ 1composer global require &quot;laravel/envoy=~1.0&quot; 教程什么的就看官网的～ https://l">
+<meta property="og:updated_time" content="2017-05-20T02:31:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Laravel的Eloquent好用到哭">
-<meta name="twitter:description" content="一直对数据库查询语句，各种关联非常的不感冒. 直到最近开始使用laravel，简单了解了Eloquent之后，发现这玩意真的是好用到哭啊。 本来我还非常脑残的使用这种方式来查询 123$order = Orders::where(&apos;id&apos;,$order_id)-&amp;gt;first();$customer = Customers::where(&apos;id&apos;,$order[&apos;customer_id&apos;])-">
+<meta name="twitter:title" content="使用Laravel Envoy来快速部署代码">
+<meta name="twitter:description" content="现在使用git来发布代码，所以每次更新的时候，总是需要登录服务器，cd到网站目录，然后git pull。 本来觉得挺爽的，后来次数多了，发现。。。真的挺蠢。 本来决定写一个sh来解决这个问题，后来发现，原来有更好的解决办法，就是Laravel Envoy! 安装~ 1composer global require &quot;laravel/envoy=~1.0&quot; 教程什么的就看官网的～ https://l">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.huleping.com/2017/05/05/Laravel的Eloquent好用到哭/"/>
+  <link rel="canonical" href="http://www.huleping.com/2017/05/20/使用Laravel-Envoy来快速部署代码/"/>
 
 
 
 
 
-  <title>Laravel的Eloquent好用到哭 | 执行力就是挨个搞</title>
+  <title>使用Laravel Envoy来快速部署代码 | 执行力就是挨个搞</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +252,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.huleping.com/2017/05/05/Laravel的Eloquent好用到哭/">
+    <link itemprop="mainEntityOfPage" href="http://www.huleping.com/2017/05/20/使用Laravel-Envoy来快速部署代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="L">
@@ -273,7 +273,7 @@
             
             
               
-                Laravel的Eloquent好用到哭
+                使用Laravel Envoy来快速部署代码
               
             
           </h1>
@@ -288,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T10:56:09+08:00">
-                2017-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-20T10:21:54+08:00">
+                2017-05-20
               </time>
             
 
@@ -323,15 +323,24 @@
       
 
       
-        <p>一直对数据库查询语句，各种关联非常的不感冒.</p>
-<p>直到最近开始使用laravel，简单了解了Eloquent之后，发现这玩意真的是好用到哭啊。</p>
-<p>本来我还非常脑残的使用这种方式来查询</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$order = Orders::where(<span class="string">'id'</span>,$order_id)-&gt;first();</div><div class="line">$customer = Customers::where(<span class="string">'id'</span>,$order[<span class="string">'customer_id'</span>])-&gt;first();</div><div class="line">$car = Car::where(<span class="string">'id'</span>,$order[<span class="string">'car_id'</span>])-&gt;first();</div></pre></td></tr></table></figure>
-<p>现在仅需要在Orders的model内设置下belongsTo的关联，然后就逆天了！</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">customer</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">//获取关联的客户,</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;belongsTo(<span class="string">'App\Customers'</span>,<span class="string">'customer_id'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">car</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">//获取关联的车辆.</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;belongsTo(<span class="string">'App\Car'</span>,<span class="string">'car_id'</span>);</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
-<p>然后！！ 以上恶心的查询，就变成了：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$order = Orders::find($order_id);</div><div class="line">$customer = $order-&gt;customer;</div><div class="line">$car = $order-&gt;car;</div></pre></td></tr></table></figure>
-<p>What a fuck, 这样开发的感觉要爽的多了。</p>
+        <p>现在使用git来发布代码，所以每次更新的时候，总是需要登录服务器，cd到网站目录，然后git pull。</p>
+<p>本来觉得挺爽的，后来次数多了，发现。。。真的挺蠢。</p>
+<p>本来决定写一个sh来解决这个问题，后来发现，原来有更好的解决办法，就是Laravel Envoy!</p>
+<p>安装~</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer global require <span class="string">"laravel/envoy=~1.0"</span></div></pre></td></tr></table></figure>
+<p>教程什么的就看官网的～</p>
+<p><a href="https://laravel.com/docs/5.4/envoy" target="_blank" rel="external">https://laravel.com/docs/5.4/envoy</a></p>
+<p>安装好之后，初始化，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">envoy init root@192.168.1.1</div></pre></td></tr></table></figure></p>
+<p>写完代码之后发布，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">envoy run deploy</div></pre></td></tr></table></figure>
+<p>简直不要太爽！</p>
+<p>PS. Envoy不能使用密码登录的，所以要设置一下无密码登录。</p>
+<p>我是mac，记录下我设置的过程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">scp zuhaoche_rsa.pub user@ip:~/.ssh</div><div class="line">ssh root@192.168.1.1</div><div class="line"><span class="built_in">cd</span> ~/.ssh</div><div class="line">cat zuhaoche_rsa.pub &gt;&gt; authorized_keys</div><div class="line">chmod 644 authorized_keys</div></pre></td></tr></table></figure>
+<p>然后修改 /.ssh/config<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.ssh/config</div></pre></td></tr></table></figure></p>
+<p>增加文件内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># --- 租好车网站服务器 ---</span></div><div class="line">Host 192.168.1.1</div><div class="line">        HostName 192.168.1.1</div><div class="line">        User root</div><div class="line">        PreferredAuthentications publickey</div><div class="line">        IdentityFile /Users/H/.ssh/zuhaoche_rsa</div><div class="line"><span class="comment"># ------------------------</span></div></pre></td></tr></table></figure></p>
+<p>完工～～～～</p>
 
       
     </div>
@@ -368,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/04/一个新项目的构思/" rel="next" title="一个新项目的构思">
-                <i class="fa fa-chevron-left"></i> 一个新项目的构思
+              <a href="/2017/05/17/php7安装fileinfo-so/" rel="next" title="php7安装fileinfo.so">
+                <i class="fa fa-chevron-left"></i> php7安装fileinfo.so
               </a>
             
           </div>
@@ -377,10 +386,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/07/composer真是帅气啊/" rel="prev" title="composer真是帅气啊">
-                composer真是帅气啊 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

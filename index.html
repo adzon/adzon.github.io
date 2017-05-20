@@ -250,6 +250,143 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.huleping.com/2017/05/20/使用Laravel-Envoy来快速部署代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="L">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="执行力就是挨个搞">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/20/使用Laravel-Envoy来快速部署代码/" itemprop="url">
+                  使用Laravel Envoy来快速部署代码
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-20T10:21:54+08:00">
+                2017-05-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>现在使用git来发布代码，所以每次更新的时候，总是需要登录服务器，cd到网站目录，然后git pull。</p>
+<p>本来觉得挺爽的，后来次数多了，发现。。。真的挺蠢。</p>
+<p>本来决定写一个sh来解决这个问题，后来发现，原来有更好的解决办法，就是Laravel Envoy!</p>
+<p>安装~</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer global require <span class="string">"laravel/envoy=~1.0"</span></div></pre></td></tr></table></figure>
+<p>教程什么的就看官网的～</p>
+<p><a href="https://laravel.com/docs/5.4/envoy" target="_blank" rel="external">https://laravel.com/docs/5.4/envoy</a></p>
+<p>安装好之后，初始化，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">envoy init root@192.168.1.1</div></pre></td></tr></table></figure></p>
+<p>写完代码之后发布，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">envoy run deploy</div></pre></td></tr></table></figure>
+<p>简直不要太爽！</p>
+<p>PS. Envoy不能使用密码登录的，所以要设置一下无密码登录。</p>
+<p>我是mac，记录下我设置的过程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">scp zuhaoche_rsa.pub user@ip:~/.ssh</div><div class="line">ssh root@192.168.1.1</div><div class="line"><span class="built_in">cd</span> ~/.ssh</div><div class="line">cat zuhaoche_rsa.pub &gt;&gt; authorized_keys</div><div class="line">chmod 644 authorized_keys</div></pre></td></tr></table></figure>
+<p>然后修改 /.ssh/config<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.ssh/config</div></pre></td></tr></table></figure></p>
+<p>增加文件内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># --- 租好车网站服务器 ---</span></div><div class="line">Host 192.168.1.1</div><div class="line">        HostName 192.168.1.1</div><div class="line">        User root</div><div class="line">        PreferredAuthentications publickey</div><div class="line">        IdentityFile /Users/H/.ssh/zuhaoche_rsa</div><div class="line"><span class="comment"># ------------------------</span></div></pre></td></tr></table></figure></p>
+<p>完工～～～～</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.huleping.com/2017/05/17/php7安装fileinfo-so/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1370,135 +1507,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.huleping.com/2017/05/03/第一篇/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="L">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="执行力就是挨个搞">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/03/第一篇/" itemprop="url">
-                  第一篇
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T11:28:29+08:00">
-                2017-05-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h3><p>这是第一篇文章，希望这个基于git的博客能存在的久一点。</p>
-<p>以后有什么内容就在这里发布吧～～～</p>
-<p>而且这个程序还支持markdown写法，帅气～～～</p>
-<p>感受下iPic的图片上传，完美～～～</p>
-<p><img src="http://assets.shangyufangchan.com/2017-05-03-062944.jpg" alt=""></p>
-<p>还行，非常好用，用来做个笔录什么的。不能太棒。</p>
-<p>OK，以后就靠这个来记录东西了～～～</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1541,7 +1556,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
